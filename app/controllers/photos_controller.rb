@@ -13,6 +13,12 @@ class PhotosController < ApplicationController
     end
   end
 
+  def update
+    @farm = Farm.find(params[:farm_id])
+    @photo = @farm.photos.find_by(id: params[:id])
+    @photo.update(update_photo_params)
+  end
+
   def destroy
     @farm = Farm.find(params[:farm_id])
     @farm.photos.find(params[:id]).destroy
@@ -25,6 +31,10 @@ class PhotosController < ApplicationController
       if params[:photo].present?
         params.require(:photo).permit(:caption, :picture)
       end
+    end
+
+    def update_photo_params
+      params.require(:photo).permit(:row_order_position)
     end
 
   end

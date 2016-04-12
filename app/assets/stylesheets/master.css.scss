@@ -30,7 +30,24 @@ abbr[title], abbr[data-original-title] {
 
 .btn-danger {
   color: #fff;
+  background-color: #FF7055;
+  border-color: transparent;
+}
+.btn-danger:hover {
+  color: #fff;
   background-color: #ec6e67;
+  border-color: transparent;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #64E6C8;
+    border-color: #64E6C8;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #83E8D0;
   border-color: transparent;
 }
 
@@ -52,13 +69,6 @@ Li.list-farm-btn {
   margin-left: -100px;
   margin-top: 20px;
 }
-
-// .alert-danger {
-//   position: absolute;
-//   left: 50%;
-//   margin-left: -100px;
-//   margin-top: 20px;
-// }
 
 .clear {
     clear: both;

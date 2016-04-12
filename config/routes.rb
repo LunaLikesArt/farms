@@ -5,7 +5,7 @@ Farms::Application.routes.draw do
   root 'homepage#index'
 
   resources :farms do
-    resources :photos, only: [:create, :destroy]
+    resources :photos, only: [:create, :update, :destroy]
     resources :comments, only: :create
     resources :events
 
