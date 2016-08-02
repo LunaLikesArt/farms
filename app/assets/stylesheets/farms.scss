@@ -7,10 +7,10 @@
 }
 
 .l-pagination {
-  background: #fff;
-  text-align: center;
   cursor: default;
+  text-align: center;
 
+  background: #fff;
   background: #fff;
 }
 
@@ -23,19 +23,23 @@
 }
 
 .l-pagination .current {
-  font-style: normal;
-  font-weight: bold;
-  background-color: #83E8D0;
   display: inline-block;
+
   width: 1.4em;
   height: 1.4em;
-  -moz-border-radius: 1em;
+
   -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
   border-radius: 1em;
+  background-color: #83E8D0;
+
+  font-weight: bold;
+  font-style: normal;
 }
 
 .l-pagination a {
   text-decoration: none;
+
   color: #545759;
 }
 
@@ -57,6 +61,7 @@
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
+
   width: 100%;
   height: auto;
 }
@@ -81,13 +86,15 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
   z-index: 15;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
   margin: 0;
   padding: 0 25px 25px 0;
+
   text-align: right;
 }
 
@@ -105,15 +112,17 @@
 }
 
 .user {
-  font-weight: 900;
   margin: 0;
+
   font-size: 17px;
+  font-weight: 900;
 }
 
 .review-section {
-  font-size: 18px;
   padding-right: 0;
   padding-left: 0;
+
+  font-size: 18px;
 }
 
 .farm_name_profile {
@@ -129,8 +138,8 @@
 }
 
 .pretty_pot {
-  max-height: 120px;
   max-width: 120px;
+  max-height: 120px;
 }
 
 @media(max-width:768px) {
@@ -143,9 +152,11 @@
 }
 
 .radio, .checkbox {
-  border: 1px transparent solid;
    display:inline-block;
+
    width:13em;
+
+  border: 1px transparent solid;
 }
 
 #farm_description {
@@ -163,14 +174,18 @@
 // }
 
 .polaroid-image {
-  background: white;
-  display: inline;
-  float: left;
-  margin: 0 13px 7px;
-  padding: 10px 10px 33px;
-  -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-  box-shadow: 0 4px 6px rgba(0,0,0,.3);
-  -moz-transition: all .15s linear;
   position: relative;
   top: 15px;
+
+  display: inline;
+  float: left;
+
+  margin: 0 13px 7px;
+  padding: 10px 10px 33px;
+
+  -moz-transition: all .15s linear;
+
+  background: white;
+  -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+  box-shadow: 0 4px 6px rgba(0,0,0,.3);
 }

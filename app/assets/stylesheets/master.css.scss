@@ -1,23 +1,25 @@
 body {
   color: #545759;
+
   font-family: 'Muli', sans-serif;
 }
 
 .booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
+  padding:10px;
+
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  padding:10px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
 }
 
 // Remove round edges from all buttons
 .btn {
-  border-radius:                    0px;
   -webkit-border-radius:            0px;
   -moz-border-radius:               0px;
+  border-radius:                    0px;
 }
 
 abbr[title], abbr[data-original-title] {
@@ -30,44 +32,60 @@ abbr[title], abbr[data-original-title] {
 
 .btn-danger {
   color: #fff;
-  background-color: #FF7055;
   border-color: transparent;
+  background-color: #FF7055;
 }
 .btn-danger:hover {
   color: #fff;
-  background-color: #ec6e67;
   border-color: transparent;
+  background-color: #ec6e67;
 }
 
 .btn-success {
     color: #fff;
-    background-color: #64E6C8;
-    border-color: #64E6C8;
+    border-color: #2BE5BA;
+    background-color: #2BE5BA;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #83E8D0;
   border-color: transparent;
+  background-color: #49E5C1;
+}
+
+.btn-success:focus, .btn-success.focus {
+  color: #fff;
+  border-color: transparent;
+  background-color: #49E5C1;
+}
+
+.btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus, .open > .btn-success.dropdown-toggle:hover, .open > .btn-success.dropdown-toggle:focus, .open > .btn-success.dropdown-toggle.focus {
+  color: #fff;
+  border-color: transparent;
+  background-color: #2BE5BA;
 }
 
 Li.list-farm-btn a {
   padding: 4px 12px;
+
   color: #FF7055;
 
 }
 
-Li.list-farm-btn {
-  border-color: #FF7055;
-  line-height: 61px; margin-top: 10px;
+Li.list-farm-btn {margin-top: 10px;
   margin-right: 15px;
+
+  border-color: #FF7055;
+
+  line-height: 61px;
 }
 
 .alert-info {
   position: absolute;
   left: 50%;
-  margin-left: -100px;
+
   margin-top: 20px;
+  margin-left: -100px;
 }
 
 .clear {

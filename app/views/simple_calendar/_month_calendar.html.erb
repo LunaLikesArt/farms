@@ -36,7 +36,7 @@
         <% block.call day.day, sorted_events.fetch(day, []) %>
         <% end %>
 
-        <%= link_to new_event_path(start_date: day ) do %>
+        <%= link_to new_farm_event_path(@farm, start_date: day ) do %>
         <i class="fa fa-plus pull-right"></i>
         <% end %>
 

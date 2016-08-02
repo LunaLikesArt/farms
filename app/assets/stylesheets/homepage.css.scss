@@ -4,10 +4,11 @@
 
 .navbar {
   border-radius:0;
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
+
+  font-family: "Helvetica Neue", Helvetica;
   font-family: 'Muli', sans-serif;
+  font-weight: 200;
 }
 
 .navbar a {
@@ -15,14 +16,16 @@
 }
 
 .navbar a.navbar-brand {
+  color: #545759;
+
   font-family: 'Grand Hotel', cursive;
   font-size: 37px;
   font-weight: 200;
-  color: #545759;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
+
   background-color: white;
 }
 
@@ -31,22 +34,25 @@
 }
 
 .list-farm-btn {
-  border: solid 1px;
-  background-color: transparent;
-  display: inline-block;    margin-bottom: 0;    -webkit-border-radius: 2px;    -moz-border-radius: 2px;    border-radius: 2px;    border: 1px solid;    text-align: center;    vertical-align: middle;    font-weight: bold;    line-height: 1.43;    -webkit-user-select: none;    -moz-user-select: none;    -ms-user-select: none;    user-select: none;    white-space: nowrap;    cursor: pointer;
-  font-weight: normal;
-  border-width: 2px;
   position: relative;
+
+  display: inline-block;    margin-bottom: 0;    cursor: pointer;-webkit-user-select: none;    -moz-user-select: none;    -ms-user-select: none;    user-select: none;    text-align: center;    vertical-align: middle;    white-space: nowrap;
+
+  border: solid 1px;border: 1px solid;
+  border-width: 2px;-webkit-border-radius: 2px;    -moz-border-radius: 2px;    border-radius: 2px;
+  background-color: transparent;font-weight: bold;
+  font-weight: normal;line-height: 1.43;
 }
 
 
 .hero {
+  height:700px;
+
   background: url('barn-hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height:700px;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
@@ -54,37 +60,42 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .frosty {
-  background:rgba(0,0,0, 0.5);
-  color:white;
   margin-top: 280px;
+
+  color:white;
+  background:rgba(0,0,0, 0.5);
 }
 
 .frosty h1 {
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
 
 .frosty h2 {
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
 
 #search {
-  background:rgba(0,0,0, 0.5);
-  color: white;
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
-  font-size: 27px;
-  line-height: 77px;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
-  margin-top: 280px;
-  border: 0;
-  outline:none;
   // padding-left: 250px;
   // padding-right: 250px;
-  width: 100%
+  width: 100%;
+  margin-top: 280px;
+
+  color: white;
+  border: 0;
+  outline:none;
+  background:rgba(0,0,0, 0.5);
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 27px;
+  font-weight: 100;
+  line-height: 77px;
 }
 
 input:-webkit-autofill,

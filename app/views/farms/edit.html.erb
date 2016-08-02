@@ -63,7 +63,7 @@ $(function() {
       <%= f.association :activities, label: false, as: :check_boxes %>
     </div>
 
-    <%= f.submit 'Save', class: 'btn btn-sm btn-success pull-right' %>
+    <%= f.submit 'Update', class: 'btn btn-sm btn-success pull-right' %>
     <!-- <%= link_to 'Delete Farm', farm_path(@farm), method: :delete, data: {confirm: 'Are you sure you want to delete this farm?'}, class: 'btn btn-danger btn-sm' %> -->
     <br />
     <% end %>
@@ -88,10 +88,17 @@ $(function() {
   </div>
 
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <%= month_calendar do |date| %>
-      <%= date %>
-      <% end %>
+    <div class="col-xs-12">
+
+        <%= month_calendar(attribute: :start_date, events: @farm.events) do |date, events| %>
+          <%= date %>
+          <% events.each do |event| %>
+            <div>
+              <%= link_to event.name, farm_event_path(@farm, event) %>
+            </div>
+          <% end %>
+        <% end %>
+
     </div>
   </div>
 
@@ -138,17 +145,17 @@ $(function() {
 
     <div class="photos">
       <% @farm.photos.rank(:row_order).each do |photo| %>
-        <div class="row" data-item-id="<%=photo.id%>">
-          <div class="col-xs-10">
-            <%= image_tag photo.picture, class: 'img-responsive' %>
-            <br />
-          </div>
-          <div class="col-xs-2">
-            <%= simple_form_for [@farm, photo], method: :delete, data: {confirm: 'Are you sure you want to delete this photo?'} do |f| %>
-              <%= f.submit 'Delete', class: 'btn btn-xs btn-danger' %>
-            <% end %>
-          </div>
+      <div class="row" data-item-id="<%=photo.id%>">
+        <div class="col-xs-10">
+          <%= image_tag photo.picture, class: 'img-responsive' %>
+          <br />
         </div>
+        <div class="col-xs-2">
+          <%= simple_form_for [@farm, photo], method: :delete, data: {confirm: 'Are you sure you want to delete this photo?'} do |f| %>
+          <%= f.submit 'Delete', class: 'btn btn-xs btn-danger' %>
+          <% end %>
+        </div>
+      </div>
       <% end %>
     </div>
     <% end %>

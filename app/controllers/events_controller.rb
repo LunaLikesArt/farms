@@ -9,21 +9,22 @@ class EventsController < ApplicationController
   end
 
   def show
-    respond_with(@event)
+    @farm = Farm.find(params[:farm_id])
   end
 
   def new
-    @event = Event.new(start_date: params[:start_date], end_date: params[:start_date])
-    respond_with(@event)
+    @farm = Farm.find(params[:farm_id])
+    @event = @farm.events.build(start_date: params[:start_date], end_date: params[:start_date])
   end
 
   def edit
   end
 
   def create
-    @event = Event.new(event_params)
+    @farm = Farm.find(params[:farm_id])
+    @event = @farm.events.build(event_params)
     @event.save
-    respond_with(@event)
+    redirect_to edit_farm_path(@farm)
   end
 
   def update
@@ -37,11 +38,11 @@ class EventsController < ApplicationController
   end
 
   private
-    def set_event
-      @event = Event.find(params[:id])
-    end
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    def event_params
-      params.require(:event).permit(:name, :description, :address, :start_time, :end_time, :start_date, :end_date)
-    end
+  def event_params
+    params.require(:event).permit(:name, :description, :address, :start_time, :end_time, :start_date, :end_date)
+  end
 end
